@@ -1,80 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230925 17:30:17.180" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230926 17:56:08.303" rpa="false" schemaversion="4">
 <suite id="s1" name="Tester" source="C:\Users\Asus\Desktop\tester">
 <suite id="s1-s1" name="TestCases" source="C:\Users\Asus\Desktop\tester\TestCases">
-<suite id="s1-s1-s1" name="Xpath" source="C:\Users\Asus\Desktop\tester\TestCases\Xpath.robot">
-<test id="s1-s1-s1-t1" name="Demo Login" line="8">
+<suite id="s1-s1-s1" name="Herokuapp" source="C:\Users\Asus\Desktop\tester\TestCases\herokuapp.robot">
+<test id="s1-s1-s1-t1" name="JavaScript Alerts" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230925 17:30:17.351" level="INFO">Opening browser 'chrome' to base url 'https://petstore.octoperf.com/actions/Catalog.action'.</msg>
-<status status="PASS" starttime="20230925 17:30:17.350" endtime="20230925 17:30:19.552"/>
+<msg timestamp="20230926 17:56:08.721" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/javascript_alerts'.</msg>
+<status status="PASS" starttime="20230926 17:56:08.721" endtime="20230926 17:56:14.157"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230925 17:30:19.552" endtime="20230925 17:30:19.666"/>
+<status status="PASS" starttime="20230926 17:56:14.157" endtime="20230926 17:56:14.299"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//area[@alt='Dogs']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:19.667" level="INFO">Clicking element '//area[@alt='Dogs']'.</msg>
-<status status="PASS" starttime="20230925 17:30:19.667" endtime="20230925 17:30:19.933"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Click for JS Alert')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230926 17:56:14.303" level="INFO">Clicking button '//button[contains(text(),'Click for JS Alert')]'.</msg>
+<status status="PASS" starttime="20230926 17:56:14.299" endtime="20230926 17:56:14.464"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>//a[contains(text(),'K9-RT-01')]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:19.934" level="INFO">Clicking link '//a[contains(text(),'K9-RT-01')]'.</msg>
-<status status="PASS" starttime="20230925 17:30:19.933" endtime="20230925 17:30:20.195"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20230926 17:56:14.468" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20230926 17:56:14.480" level="INFO">${message} = I am a JS Alert</msg>
+<status status="PASS" starttime="20230926 17:56:14.468" endtime="20230926 17:56:14.480"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Add to Cart')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:20.196" level="INFO">Clicking element '//a[contains(text(),'Add to Cart')]'.</msg>
-<status status="PASS" starttime="20230925 17:30:20.195" endtime="20230925 17:30:20.455"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230926 17:56:14.480" endtime="20230926 17:56:14.485"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Proceed to Checkout')]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:20.456" level="INFO">Clicking link '//a[contains(text(),'Proceed to Checkout')]'.</msg>
-<status status="PASS" starttime="20230925 17:30:20.456" endtime="20230925 17:30:20.718"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Click for JS Confirm')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230926 17:56:14.486" level="INFO">Clicking button '//button[contains(text(),'Click for JS Confirm')]'.</msg>
+<status status="PASS" starttime="20230926 17:56:14.485" endtime="20230926 17:56:14.625"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@name='username']</arg>
-<arg>${user}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:20.719" level="INFO">Typing text 'j2ee' into text field '//input[@name='username']'.</msg>
-<status status="PASS" starttime="20230925 17:30:20.718" endtime="20230925 17:30:20.774"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message1}</var>
+<arg>dismiss</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20230926 17:56:14.626" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20230926 17:56:14.635" level="INFO">${message1} = I am a JS Confirm</msg>
+<status status="PASS" starttime="20230926 17:56:14.626" endtime="20230926 17:56:14.638"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='Login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:20.775" level="INFO">Clicking element '//input[@value='Login']'.</msg>
-<status status="PASS" starttime="20230925 17:30:20.774" endtime="20230925 17:30:21.518"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${message1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230926 17:56:14.638" endtime="20230926 17:56:14.640"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Sign Out')]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230925 17:30:21.519" level="INFO">Clicking link '//a[contains(text(),'Sign Out')]'.</msg>
-<status status="PASS" starttime="20230925 17:30:21.519" endtime="20230925 17:30:21.982"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Click for JS Prompt')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230926 17:56:14.642" level="INFO">Clicking button '//button[contains(text(),'Click for JS Prompt')]'.</msg>
+<status status="PASS" starttime="20230926 17:56:14.640" endtime="20230926 17:56:14.778"/>
+</kw>
+<kw name="Input Text Into Alert" library="SeleniumLibrary">
+<arg>Test</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" starttime="20230926 17:56:14.779" endtime="20230926 17:56:14.786"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230925 17:30:23.983" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230925 17:30:21.982" endtime="20230925 17:30:23.983"/>
+<msg timestamp="20230926 17:56:18.786" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230926 17:56:14.786" endtime="20230926 17:56:18.786"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230925 17:30:23.984" endtime="20230925 17:30:26.047"/>
+<status status="PASS" starttime="20230926 17:56:18.789" endtime="20230926 17:56:21.020"/>
 </kw>
-<status status="PASS" starttime="20230925 17:30:17.350" endtime="20230925 17:30:26.048"/>
+<status status="PASS" starttime="20230926 17:56:08.721" endtime="20230926 17:56:21.022"/>
 </test>
-<status status="PASS" starttime="20230925 17:30:17.204" endtime="20230925 17:30:26.050"/>
+<status status="PASS" starttime="20230926 17:56:08.356" endtime="20230926 17:56:21.025"/>
 </suite>
-<status status="PASS" starttime="20230925 17:30:17.201" endtime="20230925 17:30:26.052"/>
+<status status="PASS" starttime="20230926 17:56:08.348" endtime="20230926 17:56:21.027"/>
 </suite>
-<status status="PASS" starttime="20230925 17:30:17.183" endtime="20230925 17:30:26.053"/>
+<status status="PASS" starttime="20230926 17:56:08.305" endtime="20230926 17:56:21.035"/>
 </suite>
 <statistics>
 <total>
@@ -85,7 +91,7 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Tester">Tester</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCases">Tester.TestCases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Xpath">Tester.TestCases.Xpath</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Herokuapp">Tester.TestCases.Herokuapp</stat>
 </suite>
 </statistics>
 <errors>
