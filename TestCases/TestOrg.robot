@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource    ./Keyword.robot
+Resource    ../Org/Keyword.robot
 
 *** Test Cases ***
 TC:Invalid Login
