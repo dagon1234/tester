@@ -6,9 +6,9 @@ Resource    ./Keyword.robot
 TC:Invalid Login
     Launch Brower
     Verify Login
-    Input Username
-    Input Password
+    Input Username    standard
+    Input Password    secret_sauce
     Submit
-    Verify Login Error
+    Verify Login Error    Epic sadface: Username and password do not match any user in this service
     Clear Login
     Browser Close

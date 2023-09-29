@@ -8,12 +8,15 @@ Launch Brower
 Verify Login
     Title Should Be    ${title}
 Input Username
-    Input Text    ${uName}    standard
+    [Arguments]    ${user}
+    Input Text    ${uName}    ${user}
 Input Password
-    Input Text    ${uPass}    secret_sauce
+    [Arguments]    ${pass}
+    Input Text    ${uPass}    ${pass}
 Submit
     Click Button    ${LogBut}
 Verify Login Error
+    [Arguments]    ${errMsg}
     element should contain    ${VerityLog}    ${errMsg}
 Clear Login
     Clear Element Text     ${uName}
